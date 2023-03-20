@@ -1,4 +1,4 @@
-package com.hashone.allinone.utils
+package com.hashone.textview.textviewnew
 
 import java.net.URLDecoder
 
