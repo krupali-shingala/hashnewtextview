@@ -6,6 +6,6 @@ allprojects {
 		}
 	}
 
-[![](https://jitpack.io/v/krupalihashone/hashnewtextview.svg)](https://jitpack.io/#krupalihashone/hashnewtextview)
+  [![](https://jitpack.io/v/krupalihashone/hashnewtextview.svg)](https://jitpack.io/#krupalihashone/hashnewtextview)
 
 	        implementation 'com.github.krupalihashone:hashnewtextview:Tag'
