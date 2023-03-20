@@ -1441,7 +1441,7 @@ class EditActivity : BaseActivity(), CoroutineScope {
         }
     }
 
-    private fun addTextView(elementData: ElementData, fromUser: Boolean) {
+    fun addTextView(elementData: ElementData, fromUser: Boolean) {
         try {
             var elementId: Int = -1
             var mViewWidth = if (fromUser) editorWidth - Utils.dpToPx(48F).roundToInt()

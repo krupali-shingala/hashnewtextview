@@ -1,2 +1,0 @@
-int color snap_line_color 0x0
-int color snap_line_edit_area 0x0
