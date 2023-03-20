@@ -1,4 +1,4 @@
-package com.hashone.allinone.enums
+package com.hashone.textview.textviewnew
 
 import java.io.Serializable
 
