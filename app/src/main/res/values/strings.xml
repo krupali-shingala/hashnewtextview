@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">TextViewModule</string>
+    <string name="app_folder_name">TextViewModule</string>
+
+    <string name="label_background">Background</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_add">Add</string>
+    <string name="label_edit">Edit</string>
+    <string name="label_duplicate">Duplicate</string>
+    <string name="label_fonts">Fonts</string>
+    <string name="label_color">Color</string>
+    <string name="label_opacity">Opacity</string>
+    <string name="label_spacing">Spacing</string>
+    <string name="label_flip_h">Flip H</string>
+    <string name="label_flip_v">Flip V</string>
+    <string name="label_align">Align</string>
+    <string name="label_format">Format</string>
+    <string name="label_order">Order</string>
+    <string name="label_rotate">Rotate</string>
+    <string name="label_shadow">Shadow</string>
+    <string name="label_text_fill">Text mask</string>
+    <string name="label_copy_style">Copy Style</string>
+    <string name="label_paste_style">Paste Style</string>
+    <string name="label_size_plus">Size up</string>
+    <string name="label_size_minus">Size down</string>
+    <string name="label_nudge">Nudge</string>
+    <string name="label_nudge_left">Nudge Left</string>
+    <string name="label_nudge_right">Nudge Right</string>
+    <string name="label_nudge_up">Nudge Up</string>
+    <string name="label_nudge_down">Nudge Down</string>
+
+    <string name="label_none">None</string>
+    <string name="label_caps">Caps</string>
+    <string name="label_lower">Lower</string>
+    <string name="label_title">Title</string>
+    <string name="label_front">Front</string>
+    <string name="label_back">Back</string>
+    <string name="label_down">Down</string>
+    <string name="label_up">Up</string>
+
+    <string name="label_distance">Distance</string>
+    <string name="label_blur">Blur</string>
+
+    <string name="label_left">left</string>
+    <string name="label_right">right</string>
+    <string name="label_up_">up</string>
+    <string name="label_down_">down</string>
+
+    <string name="no_internet">No internet!</string>
+    <string name="label_save">Save</string>
+    <string name="label_text">Text</string>
+    <string name="label_all">All Fonts</string>
+    <string name="label_drag_message">touch here &amp; drag up</string>
+    <string name="label_saving">Saving</string>
+</resources>

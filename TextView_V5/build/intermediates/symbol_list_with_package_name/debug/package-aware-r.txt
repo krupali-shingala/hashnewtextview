@@ -1,0 +1,3 @@
+com.hashone.module.textview
+color snap_line_color
+color snap_line_edit_area

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hashone.commonutils.views.BackgroundLinearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParentEdit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context=".activities.EditActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/merge_toolbar_icon" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:padding="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/templatePreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_prev"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/templateUndo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_undo"
+                    android:visibility="invisible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <com.hashone.commonutils.views.BackgroundFrameLayout
+        android:id="@+id/layoutEditorFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.hashone.commonutils.views.BackgroundFrameLayout
+            android:id="@+id/editParentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="64dp"
+            android:clickable="true"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hashone.commonutils.views.BackgroundCardView
+                android:id="@+id/editParentWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="44dp"
+                android:clipChildren="false"
+                android:layout_gravity="center"
+                android:clipToPadding="false"
+                android:visibility="invisible"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false"
+                app:strokeColor="@color/extra_light_gray"
+                app:strokeWidth="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/transperent" />
+
+                <FrameLayout
+                    android:id="@+id/editParentLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/viewWhiteBorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drawable_edit_border"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/viewBaseVertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:clipChildren="false"
+                    android:background="@color/black"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/viewBaseHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:clipChildren="false"
+                    android:background="@color/black"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <com.hashone.module.textview.views.pickerview.ColorPickerView
+                    android:id="@+id/colorPickerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/layoutWorkSpace"
+                    app:layout_constraintEnd_toEndOf="@+id/layoutWorkSpace"
+                    app:layout_constraintStart_toStartOf="@+id/layoutWorkSpace"
+                    app:layout_constraintTop_toTopOf="@+id/layoutWorkSpace"
+                    app:selector="@drawable/drawable_color_picker_touch_area" />
+
+            </com.hashone.commonutils.views.BackgroundCardView>
+
+            <FrameLayout
+                android:id="@+id/selectedViewBorderUI"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipChildren="false"
+                android:layout_gravity="center"
+                android:clipToPadding="false"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/drawable_selected_element_border_black" />
+
+                <com.hashone.commonutils.views.CircleDotImageView
+                    android:id="@+id/imageViewLeftTopIconWhite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginStart="-18dp"
+                    android:layout_marginTop="-18dp"
+                    android:layout_gravity="start|top"
+                    android:scaleType="fitXY"/>
+
+                <com.hashone.commonutils.views.CircleDotImageView
+                    android:id="@+id/imageViewRightTopIconWhite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="-18dp"
+                    android:layout_marginTop="-18dp"
+                    android:layout_gravity="end|top"
+                    android:scaleType="fitXY"/>
+
+                <com.hashone.commonutils.views.CircleDotImageView
+                    android:id="@+id/imageViewLeftBottomIconWhite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginStart="-18dp"
+                    android:layout_marginBottom="-18dp"
+                    android:layout_gravity="start|bottom"
+                    android:scaleType="fitXY"/>
+
+                <com.hashone.commonutils.views.CircleDotImageView
+                    android:id="@+id/imageViewRightBottomIconWhite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="-18dp"
+                    android:layout_marginBottom="-18dp"
+                    android:layout_gravity="end|bottom"
+                    android:scaleType="fitXY"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewLeftTopIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_marginStart="-4dp"
+                    android:src="@drawable/ic_select_point"
+                    android:layout_marginTop="-4dp"
+                    android:layout_gravity="start|top"
+                    android:scaleType="fitXY"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewRightTopIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="end|top"
+                    android:layout_marginEnd="-4dp"
+                    android:layout_marginTop="-4dp"
+                    android:src="@drawable/ic_select_point"
+                    android:scaleType="fitXY"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewLeftBottomIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="-4dp"
+                    android:layout_marginBottom="-4dp"
+                    android:src="@drawable/ic_select_point"
+                    android:scaleType="fitXY"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewRightBottomIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="-4dp"
+                    android:layout_marginBottom="-4dp"
+                    android:src="@drawable/ic_select_point"
+                    android:scaleType="fitXY"/>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/leftWrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="-8dp"
+                    android:visibility="gone"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_text_wrap_edg" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/rightWrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginEnd="-8dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_text_wrap_edg" />
+
+            </FrameLayout>
+
+        </com.hashone.commonutils.views.BackgroundFrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/extra_extra_light_gray"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/elementSubPanelContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/extra_extra_light_gray" />
+
+            <FrameLayout
+                android:id="@+id/layoutEditRootPanel"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/white">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewParentPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:spanCount="10"
+                    tools:listitem="@layout/panel_item_main" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/elementPanelLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/closeElementPanelImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="12dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_done_selector" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="13dp"
+                        android:background="@color/light_gray" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewElementPanel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:clipToPadding="false"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:spanCount="10"
+                        tools:listitem="@layout/panel_item_main" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--            android:id="@+id/savedBounceView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom|center_horizontal"-->
+<!--            android:layout_marginBottom="80dp"-->
+<!--            android:background="@drawable/bg_saved_bounce"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="19dp"-->
+<!--            android:visibility="gone">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/ic_lang_check" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="9dp"-->
+<!--                android:fontFamily="@font/roboto_bold"-->
+<!--                android:text="@string/label_saved"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="16sp" />-->
+
+<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        <View
+            android:id="@+id/fontBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_color"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+        <include layout="@layout/google_bottom_sheet_fonts" />
+    </com.hashone.commonutils.views.BackgroundFrameLayout>
+
+</com.hashone.commonutils.views.BackgroundLinearlayout>

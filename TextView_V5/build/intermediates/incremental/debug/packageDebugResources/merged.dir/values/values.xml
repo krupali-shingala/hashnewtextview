@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="snap_line_color">#FF5A5F</color>
+    <color name="snap_line_edit_area">#000000</color>
+</resources>

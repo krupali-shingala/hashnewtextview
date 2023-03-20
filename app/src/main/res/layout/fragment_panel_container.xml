@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panelContainerParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tabTopLinear"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/extra_extra_light_gray"
+        app:layout_constraintBottom_toTopOf="@+id/elementSubCategoryTabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/elementSubCategoryTabs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:textAlignment="textStart"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/panelContainerBottom"
+        app:layout_constraintDimensionRatio="H, 1:0.1111111111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabGravity="center"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorColor="@null"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="2dp"
+        app:tabInlineLabel="true"
+        app:tabMode="auto"
+        app:tabPaddingEnd="12dp"
+        app:tabPaddingStart="12dp"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/CustomTextAppearanceTabUser"
+        app:tabTextColor="@color/light_gray" />
+
+    <View
+        android:id="@+id/PanelTopLinear"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/extra_extra_light_gray"
+        app:layout_constraintBottom_toTopOf="@+id/panelContainerBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/panelContainerBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H, 1:0.1777777778"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--Colors, Backgrounds, Text Format, Order-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/panelContainerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="4dp"
+            android:visibility="gone" />
+
+        <!--Opacity-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/opacityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="26dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/opacitySeekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="64dp"
+                android:minHeight="64dp"
+                android:progress="0"
+                android:thumb="@drawable/ic_oval"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewImageOpacityPlus1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/opacityValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:hint="    "
+                android:minWidth="40dp"
+                android:text="0%"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Spacing-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/spacingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_line_s" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/lineSSeekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="64dp"
+                android:minHeight="64dp"
+                android:progress="0"
+                android:thumb="@drawable/ic_oval"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewImageOpacityPlus1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/lineHSeekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="64dp"
+                android:minHeight="64dp"
+                android:progress="0"
+                android:thumb="@drawable/ic_oval"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewImageOpacityPlus1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_line_h" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Image Radius-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/imageRadiusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="26dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/imageRadiusSeekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="64dp"
+                android:minHeight="64dp"
+                android:progress="0"
+                android:thumb="@drawable/ic_oval"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewImageOpacityPlus1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/imageRadiusValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:hint="    "
+                android:minWidth="40dp"
+                android:text="0%"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Sticker Shadow Opacity-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/stickerShadowOpacityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="26dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/stickerShadowOpacitySeekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="64dp"
+                android:minHeight="64dp"
+                android:progress="0"
+                android:thumb="@drawable/ic_oval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/stickerShadowOpacityValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:hint="    "
+                android:minWidth="40dp"
+                android:text="0%"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Sticker Shadow Distance-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/stickerShadowDistanceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="0dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|top"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@string/label_left"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|top"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@string/label_right"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/stickerShadowDistanceLeftRightSeekbar"
+                    style="@style/CustomSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:max="100"
+                    android:maxHeight="64dp"
+                    android:minHeight="64dp"
+                    android:progress="0"
+                    android:thumb="@drawable/ic_oval" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="0dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|top"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@string/label_up_"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|top"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@string/label_down_"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/stickerShadowDistanceUpDownSeekbar"
+                    style="@style/CustomSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:max="100"
+                    android:maxHeight="64dp"
+                    android:minHeight="64dp"
+                    android:progress="0"
+                    android:thumb="@drawable/ic_oval" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Sticker Shadow Blur-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/stickerShadowBlurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="26dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/stickerShadowBlurSeekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="64dp"
+                android:minHeight="64dp"
+                android:progress="0"
+                android:thumb="@drawable/ic_oval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/stickerShadowBlurValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:hint="    "
+                android:minWidth="40dp"
+                android:text="0%"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Rotate-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/rotateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="26dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/rotateSeekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:max="360"
+                android:maxHeight="64dp"
+                android:minHeight="64dp"
+                android:progress="0"
+                android:thumb="@drawable/ic_oval"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewImageOpacityPlus1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rotateValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:hint="    "
+                android:minWidth="40dp"
+                android:text="0"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+
+    <!--Palette-->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/palettePanelLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H, 1:0.2222222222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/closePalettePanelImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_done_selector" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp"
+            android:background="@color/light_gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/panelPaletteList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/PanelTopLinear2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/extra_extra_light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/palettePanelLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

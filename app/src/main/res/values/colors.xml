@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#121212</color>
+    <color name="dark_gray">#505050</color>
+    <color name="light_gray">#999999</color>
+    <color name="secondary_light_gray">#cccccc</color>
+    <color name="secondary_extra_light_gray">#efefef</color>
+    <color name="extra_light_gray">#ecedef</color>
+    <color name="extra_extra_light_gray">#fbfbfb</color>
+    <color name="white">#ffffff</color>
+    <color name="tint">#005ee7</color>
+    <color name="alert">#ff1800</color>
+    <color name="black_trans_50">#7f000000</color>
+
+    <color name="snap_line_edit_area">#000000</color>
+    <color name="snap_line_color">#FF5A5F</color>
+    <color name="transparent_color">#00000000</color>
+
+    <!--Color List Start-->
+    <color name="color1">#ffffff</color>
+    <color name="color2">#e3e3e3</color>
+    <color name="color3">#c6c6c6</color>
+    <color name="color4">#aaaaaa</color>
+    <color name="color5">#8e8e8e</color>
+
+    <color name="color6">#717171</color>
+    <color name="color7">#555555</color>
+    <color name="color8">#393939</color>
+    <color name="color9">#1c1c1c</color>
+    <color name="color10">#000000</color>
+
+    <color name="color11">#ff0000</color>
+    <color name="color12">#ffaaaa</color>
+    <color name="color13">#ff5555</color>
+    <color name="color14">#aa0000</color>
+    <color name="color15">#550000</color>
+
+    <color name="color16">#ffa500</color>
+    <color name="color17">#ffe1aa</color>
+    <color name="color18">#ffc355</color>
+    <color name="color19">#aa6e00</color>
+    <color name="color20">#553700</color>
+
+    <color name="color21">#ffff00</color>
+    <color name="color22">#ffffaa</color>
+    <color name="color23">#ffff55</color>
+    <color name="color24">#aaaa00</color>
+    <color name="color25">#555500</color>
+
+    <color name="color26">#008000</color>
+    <color name="color27">#aad5aa</color>
+    <color name="color28">#55aa55</color>
+    <color name="color29">#005500</color>
+    <color name="color30">#002b00</color>
+
+    <color name="color31">#0000ff</color>
+    <color name="color32">#aaaaff</color>
+    <color name="color33">#5555ff</color>
+    <color name="color34">#0000aa</color>
+    <color name="color35">#000055</color>
+
+    <color name="color36">#00ffff</color>
+    <color name="color37">#aaffff</color>
+    <color name="color38">#55ffff</color>
+    <color name="color39">#00aaaa</color>
+    <color name="color40">#005555</color>
+
+    <color name="color41">#800080</color>
+    <color name="color42">#d5aad5</color>
+    <color name="color43">#aa55aa</color>
+    <color name="color44">#550055</color>
+    <color name="color45">#2b002b</color>
+
+    <color name="color46">#a52a2a</color>
+    <color name="color47">#e1b8b8</color>
+    <color name="color48">#c37171</color>
+    <color name="color49">#6e1c1c</color>
+    <color name="color50">#370e0e</color>
+
+    <color name="color51">#ff00ff</color>
+    <color name="color52">#ffaaff</color>
+    <color name="color53">#ff55ff</color>
+    <color name="color54">#aa00aa</color>
+    <!--    <color name="color55">#550055</color>&lt;!&ndash;&ndash;&gt;-->
+
+    <color name="color56">#d2b48c</color>
+    <color name="color57">#f0e6d9</color>
+    <color name="color58">#e1cdb2</color>
+    <color name="color59">#8c785d</color>
+    <color name="color60">#463c2f</color>
+
+    <color name="color61">#808000</color>
+    <color name="color62">#d5d5aa</color>
+    <color name="color63">#aaaa55</color>
+    <!--    <color name="color64">#555500</color>&lt;!&ndash;&ndash;&gt;-->
+    <color name="color65">#2b2b00</color>
+
+    <color name="color66">#800000</color>
+    <color name="color67">#d5aaaa</color>
+    <color name="color68">#aa5555</color>
+    <!--    <color name="color69">#550000</color>-->
+    <color name="color70">#2b0000</color>
+
+    <color name="color71">#000080</color>
+    <color name="color72">#aaaad5</color>
+    <color name="color73">#5555aa</color>
+    <!--    <color name="color74">#000055</color>&lt;!&ndash;&ndash;&gt;-->
+    <color name="color75">#00002b</color>
+
+    <color name="color76">#7fffd4</color>
+    <color name="color77">#d4fff1</color>
+    <color name="color78">#aaffe2</color>
+    <color name="color79">#55aa8d</color>
+    <color name="color80">#2a5547</color>
+
+    <color name="color81">#40e0d0</color>
+    <color name="color82">#bff5ef</color>
+    <color name="color83">#80eae0</color>
+    <color name="color84">#2b958b</color>
+    <color name="color85">#154b45</color>
+
+    <color name="color86">#00ff00</color>
+    <color name="color87">#aaffaa</color>
+    <color name="color88">#55ff55</color>
+    <color name="color89">#00aa00</color>
+    <!--    <color name="color90">#005500</color>&lt;!&ndash;&ndash;&gt;-->
+
+    <color name="color91">#008080</color>
+    <color name="color92">#aad5d5</color>
+    <color name="color93">#55aaaa</color>
+    <!--    <color name="color94">#005555</color>&lt;!&ndash;&ndash;&gt;-->
+    <!--    <color name="color95">#2b2b00</color>&lt;!&ndash;&ndash;&gt;-->
+
+    <color name="color96">#4b0082</color>
+    <color name="color97">#c3aad5</color>
+    <color name="color98">#8755ac</color>
+    <color name="color99">#320057</color>
+    <color name="color100">#19002b</color>
+
+    <color name="color101">#7f00ff</color>
+    <color name="color102">#d4aaff</color>
+    <color name="color103">#aa55ff</color>
+    <color name="color104">#5500aa</color>
+    <color name="color105">#2a0055</color>
+
+    <color name="color106">#ffc0cb</color>
+    <color name="color107">#ffeaee</color>
+    <color name="color108">#ffd5dc</color>
+    <color name="color109">#aa8087</color>
+    <color name="color110">#554044</color>
+    <!--Color List End-->
+
+    <integer-array name="staticColors">
+        <item>@color/color1</item>
+        <item>@color/color2</item>
+        <item>@color/color3</item>
+        <item>@color/color4</item>
+        <item>@color/color5</item>
+        <item>@color/color6</item>
+        <item>@color/color7</item>
+        <item>@color/color8</item>
+        <item>@color/color9</item>
+        <item>@color/color10</item>
+        <item>@color/color11</item>
+        <item>@color/color12</item>
+        <item>@color/color13</item>
+        <item>@color/color14</item>
+        <item>@color/color15</item>
+        <item>@color/color16</item>
+        <item>@color/color17</item>
+        <item>@color/color18</item>
+        <item>@color/color19</item>
+        <item>@color/color20</item>
+        <item>@color/color21</item>
+        <item>@color/color22</item>
+        <item>@color/color23</item>
+        <item>@color/color24</item>
+        <item>@color/color25</item>
+        <item>@color/color26</item>
+        <item>@color/color27</item>
+        <item>@color/color28</item>
+        <item>@color/color29</item>
+        <item>@color/color30</item>
+        <item>@color/color31</item>
+        <item>@color/color32</item>
+        <item>@color/color33</item>
+        <item>@color/color34</item>
+        <item>@color/color35</item>
+        <item>@color/color36</item>
+        <item>@color/color37</item>
+        <item>@color/color38</item>
+        <item>@color/color39</item>
+        <item>@color/color40</item>
+        <item>@color/color41</item>
+        <item>@color/color42</item>
+        <item>@color/color43</item>
+        <item>@color/color44</item>
+        <item>@color/color45</item>
+        <item>@color/color46</item>
+        <item>@color/color47</item>
+        <item>@color/color48</item>
+        <item>@color/color49</item>
+        <item>@color/color50</item>
+        <item>@color/color51</item>
+        <item>@color/color52</item>
+        <item>@color/color53</item>
+        <item>@color/color54</item>
+        <!--        <item>@color/color55</item>-->
+        <item>@color/color56</item>
+        <item>@color/color57</item>
+        <item>@color/color58</item>
+        <item>@color/color59</item>
+        <item>@color/color60</item>
+        <item>@color/color61</item>
+        <item>@color/color62</item>
+        <item>@color/color63</item>
+        <!--        <item>@color/color64</item>-->
+        <item>@color/color65</item>
+        <item>@color/color66</item>
+        <item>@color/color67</item>
+        <item>@color/color68</item>
+        <!--        <item>@color/color69</item>-->
+        <item>@color/color70</item>
+        <item>@color/color71</item>
+        <item>@color/color72</item>
+        <item>@color/color73</item>
+        <!--        <item>@color/color74</item>-->
+        <item>@color/color75</item>
+        <item>@color/color76</item>
+        <item>@color/color77</item>
+        <item>@color/color78</item>
+        <item>@color/color79</item>
+        <item>@color/color80</item>
+        <item>@color/color81</item>
+        <item>@color/color82</item>
+        <item>@color/color83</item>
+        <item>@color/color84</item>
+        <item>@color/color85</item>
+        <item>@color/color86</item>
+        <item>@color/color87</item>
+        <item>@color/color88</item>
+        <item>@color/color89</item>
+        <!--        <item>@color/color90</item>-->
+        <item>@color/color91</item>
+        <item>@color/color92</item>
+        <item>@color/color93</item>
+        <!--        <item>@color/color94</item>-->
+        <!--        <item>@color/color95</item>-->
+        <item>@color/color96</item>
+        <item>@color/color97</item>
+        <item>@color/color98</item>
+        <item>@color/color99</item>
+        <item>@color/color100</item>
+        <item>@color/color101</item>
+        <item>@color/color102</item>
+        <item>@color/color103</item>
+        <item>@color/color104</item>
+        <item>@color/color105</item>
+        <item>@color/color106</item>
+        <item>@color/color107</item>
+        <item>@color/color108</item>
+        <item>@color/color109</item>
+        <item>@color/color110</item>
+    </integer-array>
+</resources>
